@@ -1,2 +1,5 @@
-# Speed-monitor
-arduino project
+# Physical Computing "Speed-monitor Project"
+Project นี้เป็นส่วนหนึ่งในรายวิชา PHYSICAL COMPUTING 06016409 ภาคเรียนที่ 1 ปีการศึกษา 2567 ของคณะเทคโนโลยีสารสนเทศ สาขาเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+## บทคัดย่อ
+## อุปกรณ์ที่ใช้งาน
+  * #### Arduino UNO
