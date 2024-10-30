@@ -13,7 +13,7 @@ TinyGPSPlus gps;
 SoftwareSerial gpsSerial(0, 1);  // RX, TX
 
 #define BUZZER_PIN 7   // Buzzer
-#define BUTTON 8  // ปุ่มสำหรับเริ่มวัดระยะทาง
+#define BUTTON 8  // ปุ่มวัดระยะทาง
 #define LED_PIN 3
 
 double lastlatitude = 0, lastlongtitude = 0;
@@ -56,7 +56,6 @@ void setup() {
   // กำหนด pin ของ buzzer และปุ่ม
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
-  pinMode(BUTTON_STOP_PIN, INPUT_PULLUP);
   pinMode(LED_PIN, OUTPUT);
 }
 
@@ -86,7 +85,7 @@ void loop() {
       Serial.println(gps.location.lng(), 6);
       display.display();
 
-      if (speed > 30) {
+      if (speed > 15) {
         digitalWrite(BUZZER_PIN, LOW);  // เปิด buzzer
         digitalWrite(LED_PIN, HIGH);
       } else {
@@ -95,7 +94,7 @@ void loop() {
       }
 
       if(lastlatitude != 0 && lastlongtitude != 0 && isMeasuring){
-        double distance = gps.distanceBetween(lastlatitude, lastlongtitude, currentlatitude, currentlongtitude)/10000; //calculate distance to km
+        double distance = gps.distanceBetween(lastlatitude, lastlongtitude, currentlatitude, currentlongtitude)/1000; //calculate distance to km
         totaldistance += distance;
         Serial.print(" distance= "); 
         Serial.println(totaldistance);
@@ -111,10 +110,13 @@ void loop() {
         // บันทึกพิกัดเริ่มต้น
         totaldistance = 0;
         isMeasuring = true;
+        digitalWrite(BUZZER_PIN, LOW);
+        delay(300);
+        digitalWrite(BUZZER_PIN, HIGH);
         display.clearDisplay();
         display.setTextSize(2);
         display.setCursor(0, 0);
-        display.print("Start measuring distance");
+        display.print("Start     measuring distance");
         Serial.println("Start measuring distance...");
         display.display();
         delay(3000);  // Debounce delay
@@ -122,7 +124,9 @@ void loop() {
         // บันทึกพิกัดปลายทาง
         isMeasuring = false;
         Serial.println("Stop measuring distance...");
-      
+        digitalWrite(BUZZER_PIN, LOW);
+        delay(300);
+        digitalWrite(BUZZER_PIN, HIGH);
         
         // แสดงระยะทางบนจอ
         display.clearDisplay();
