@@ -4,7 +4,7 @@ Project นี้เป็นส่วนหนึ่งในรายวิช
 โครงงานนี้เป็นการใช้ Microcontroller สร้างเป็นเครื่องวัดความเร็วสำผู้ขับขี้จักรยานมี Module GPS เป็นตัวคำนวณความเร็วความเร็วขณะขับขี่จักรยานนี้จะช่วยให้ผู้ขับขี่สามารถทราบถึงความเร็วในขณะขับขี่แบบเรียลไทม์ รวมถึงสามารถบันทึกและสรุปข้อมูลหลังการขับขี่ เช่น ระยะทาง เพื่อให้ผู้ขับขี่สามารถติดตามความก้าวหน้าของตนเองได้
 ## อุปกรณ์ที่ใช้งาน
   * #### Arduino UNO R4 WIFI
-    > ![Arduino Uno Screenshot](https://github.com/pprwf/PhyCom-Project__LightIntensityAlarm__/blob/main/Picture/Arduino%20Uno.png "Arduino Uno")
+    > ![Arduino Uno Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/arduinor4.jpg "Arduino Uno")
   * #### Module GY-NEO-6MV2
     > ![GPS Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/gps.jpg "Arduino Uno")
   * #### OLEDI2C
