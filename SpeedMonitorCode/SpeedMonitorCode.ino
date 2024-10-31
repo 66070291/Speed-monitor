@@ -46,10 +46,10 @@ void setup() {
   }
   
   display.clearDisplay();
-  display.setTextSize(1);
+  display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(0, 10);
-  display.println(F("GPS Speed & Distance"));
+  display.println(F("Speed     monitor"));
   display.display();
   delay(2000);
 
@@ -107,6 +107,7 @@ void loop() {
       // วัดระยะทางเมื่อกดปุ่ม
       int state = digitalRead(BUTTON);
       if (state == 0 && !isMeasuring) {
+         
         // บันทึกพิกัดเริ่มต้น
         totaldistance = 0;
         isMeasuring = true;
@@ -119,7 +120,7 @@ void loop() {
         display.print("Start     measuring distance");
         Serial.println("Start measuring distance...");
         display.display();
-        delay(3000);  // Debounce delay
+        delay(3000);  
       }else if (state == 0 && isMeasuring) {
         // บันทึกพิกัดปลายทาง
         isMeasuring = false;
@@ -127,21 +128,24 @@ void loop() {
         digitalWrite(BUZZER_PIN, LOW);
         delay(300);
         digitalWrite(BUZZER_PIN, HIGH);
-        
+
+
         // แสดงระยะทางบนจอ
         display.clearDisplay();
         display.setTextSize(2);
         display.setCursor(0, 0);
-        display.print("Result    Distance: ");
-        display.setCursor(0, 45);
+        display.print("Result Distance:");
+        display.setCursor(0, 20);
         display.print(totaldistance, 2);
-        display.println(" km");
+        display.print(" km");
         display.display();
-        
+
         Serial.print("Result Distance: ");
         Serial.print(totaldistance, 2);
         Serial.println(" km");
-        delay(5000);  // Debounce delay
+
+        // Debounce delay
+        delay(5000);
       }
     }
   }
