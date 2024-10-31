@@ -5,5 +5,19 @@ Project นี้เป็นส่วนหนึ่งในรายวิช
 ## อุปกรณ์ที่ใช้งาน
   * #### Arduino UNO R4 WIFI
     > ![Arduino Uno Screenshot](https://github.com/pprwf/PhyCom-Project__LightIntensityAlarm__/blob/main/Picture/Arduino%20Uno.png "Arduino Uno")
-  * #### Arduino UNO R4 WIFI
+  * #### Module GY-NEO-6MV2
     > ![GPS Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/gps.jpg "Arduino Uno")
+  * #### OLEDI2C
+    > ![OLED Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/OLEDI2C.jpg "Arduino Uno")
+  * #### Buzzer
+    > ![buzzer Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/buzzer.jpg "Arduino Uno")
+  * #### Button
+    > ![buttton Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/button.jpg "Arduino Uno")
+  * #### RED LED
+    > ![LED Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/redled.jpg "Arduino Uno")
+  * #### Battery 18650
+    > ![Battery Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/battery.jpg "Arduino Uno")
+  * #### RED LED
+    > ![holder Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Picture/holder.jpg "Arduino Uno")
+## Youtube
+## Poster
