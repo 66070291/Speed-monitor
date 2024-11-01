@@ -19,16 +19,16 @@ SoftwareSerial gpsSerial(0, 1);  // RX, TX
 double lastlatitude = 0, lastlongtitude = 0;
 double totaldistance = 0;
 
-bool isMeasuring = false;  // ตรวจสอบสถานะการวัดระยะทาง
+bool isMeasuring = false;  
 
 void setup() {
   Serial.begin(9600);
   gpsSerial.begin(9600);
 
-  // จอ OLED เริ่มทำงาน
+  
   if (gps.location.isUpdated()) {
   Serial.println("GPS location updated.");
-  // ส่วนอื่น ๆ ตามปกติ
+  
 } else {
   Serial.println("Waiting for GPS signal...");
 }
@@ -53,7 +53,7 @@ void setup() {
   display.display();
   delay(2000);
 
-  // กำหนด pin ของ buzzer และปุ่ม
+  
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(BUTTON, INPUT_PULLUP);
   pinMode(LED_PIN, OUTPUT);
@@ -78,7 +78,7 @@ void loop() {
       display.print(" km/h");
       Serial.println(speed);
       Serial.print(" km/h");
-      //เช็คserial ละ ลอง
+      
       Serial.print("Latitude= "); 
       Serial.print(gps.location.lat(), 6);
       Serial.print(" Longitude= "); 
@@ -130,7 +130,6 @@ void loop() {
         digitalWrite(BUZZER_PIN, HIGH);
 
 
-        // แสดงระยะทางบนจอ
         display.clearDisplay();
         display.setTextSize(2);
         display.setCursor(0, 0);
@@ -144,7 +143,6 @@ void loop() {
         Serial.print(totaldistance, 2);
         Serial.println(" km");
 
-        // Debounce delay
         delay(5000);
       }
     }
