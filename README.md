@@ -25,3 +25,7 @@ https://66070291.github.io/arduino-web/
 https://youtu.be/PQvFg2SOg9M
 ## Poster
 ![poster Screenshot](https://github.com/66070291/Speed-monitor/blob/main/Poster/poster%20arduino.png "Arduino Uno")
+## สมาชิก
+นายจิรฎฐ์ สุจริต 66070028
+นายคชา ธนะพิทักษ์ 66070244
+นายเปรม เลขผล 66070291
